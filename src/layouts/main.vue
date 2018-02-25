@@ -52,7 +52,7 @@
               </v-list-tile-content>
             </v-list-tile>
           </v-list-group>
-          <v-list-tile v-else @click="" :key="item.text">
+          <v-list-tile v-else :to="item.to" :key="item.text">
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
@@ -108,28 +108,40 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      drawer: null,
-      title: 'Vue.js CMS Starter',
-      items: [
-        { icon: 'home', text: 'Dashboard' },
-        { icon: 'person', text: 'Users' },
-        { icon: 'settings', text: 'Settings' }
-        // {
-        //   icon: 'keyboard_arrow_up',
-        //   'icon-alt': 'keyboard_arrow_down',
-        //   text: 'More',
-        //   model: false,
-        //   children: [
-        //     { text: 'Import' },
-        //     { text: 'Export' },
-        //     { text: 'Print' },
-        //     { text: 'Undo changes' },
-        //     { text: 'Other contacts' }
-        //   ]
-        // },
-      ]
-    })
-  }
+export default {
+  data: () => ({
+    drawer: null,
+    title: 'Vue.js CMS Starter',
+    items: [
+      {
+        icon: 'home',
+        text: 'Dashboard',
+        to: '/'
+      },
+      {
+        icon: 'person',
+        text: 'Users',
+        to: '/users'
+      },
+      {
+        icon: 'settings',
+        text: 'Settings',
+        to: '/settings'
+      }
+      // {
+      //   icon: 'keyboard_arrow_up',
+      //   'icon-alt': 'keyboard_arrow_down',
+      //   text: 'More',
+      //   model: false,
+      //   children: [
+      //     { text: 'Import' },
+      //     { text: 'Export' },
+      //     { text: 'Print' },
+      //     { text: 'Undo changes' },
+      //     { text: 'Other contacts' }
+      //   ]
+      // },
+    ]
+  })
+}
 </script>
