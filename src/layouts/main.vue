@@ -74,7 +74,7 @@
     >
       <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <span class="hidden-sm-and-down">Google Contacts</span>
+        <span class="hidden-sm-and-down">{{title}}</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -112,6 +112,7 @@
     data: () => ({
       dialog: false,
       drawer: null,
+      title: 'Vue.js CMS Starter',
       items: [
         { icon: 'home', text: 'Dashboard' },
         { icon: 'person', text: 'Users' },
