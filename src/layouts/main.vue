@@ -130,9 +130,6 @@
         //   ]
         // },
       ]
-    }),
-    props: {
-      source: String
-    }
+    })
   }
 </script>
