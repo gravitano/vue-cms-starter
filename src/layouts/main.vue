@@ -110,7 +110,6 @@
 <script>
   export default {
     data: () => ({
-      dialog: false,
       drawer: null,
       title: 'Vue.js CMS Starter',
       items: [
