@@ -1,6 +1,12 @@
-# vue-cms-starter
+# Vue.js CMS Starter
 
-> Vue.js CMS Starter
+## Pre-installed Plugins
+
+- [Vuetify](https://vuetifyjs.com)
+- [Vuex](https://vuex.vuejs.org/)
+- [vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate)
+- [Axios](https://github.com/axios/axios)
+- [Vue Chart.js](https://github.com/apertureless/vue-chartjs)
 
 ## Build Setup
 
