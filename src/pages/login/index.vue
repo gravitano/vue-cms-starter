@@ -43,13 +43,16 @@
       ...mapGetters('auth', {
         loading: 'isLoading',
         error: 'error'
-      })
+      }),
+      nextUri () {
+        return this.$route.query.next || '/'
+      }
     },
     methods: {
       async login () {
         const res = await this.$store.dispatch('auth/login', this.$data)
         if (res) {
-          this.$router.push('/')
+          this.$router.push(this.nextUri)
         }
       }
     }
