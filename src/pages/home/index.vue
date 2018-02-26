@@ -46,7 +46,7 @@
     </v-layout>
     <v-layout class="mt-4">
       <v-flex xs6 class="pr-4">
-        <v-card class="white--text pa-2">
+        <v-card class="white--text">
           <v-card-title class="primary">
             <div>
               <h3 class="headline mb-0">Sales</h3>
@@ -58,7 +58,7 @@
         </v-card>
       </v-flex>
       <v-flex xs6>
-        <v-card class="white--text pa-2">
+        <v-card class="white--text">
           <v-card-title class="primary">
             <div>
               <h3 class="headline mb-0">Doughnut</h3>
