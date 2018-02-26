@@ -7,6 +7,7 @@
 - [vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate)
 - [Axios](https://github.com/axios/axios)
 - [Vue Chart.js](https://github.com/apertureless/vue-chartjs)
+- [vue-meta](https://github.com/declandewet/vue-meta)
 
 ## Build Setup
 
