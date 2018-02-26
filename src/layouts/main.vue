@@ -107,6 +107,15 @@
 
 <script>
   export default {
+    name: 'App',
+    metaInfo () {
+      return {
+        title: 'Home',
+        titleTemplate: (title) => {
+          return title ? `${title} - ${this.title}` : this.title
+        }
+      }
+    },
     data: () => ({
       drawer: null,
       title: 'Vue.js CMS Starter',
