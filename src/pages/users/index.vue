@@ -156,7 +156,6 @@
     },
     data () {
       return {
-//        items: [],
         viewing: false,
         user: {
           name: '',
