@@ -75,6 +75,7 @@
       <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <span class="hidden-sm-and-down">{{title}}</span>
+        <span class="hidden-lg-and-up">{{pageTitle}}</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -106,15 +107,25 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
+
   export default {
     name: 'App',
     metaInfo () {
       return {
         title: 'Home',
+        changed (meta) {
+          this.$store.dispatch('page/setTitle', meta.titleChunk)
+        },
         titleTemplate: (title) => {
           return title ? `${title} - ${this.title}` : this.title
         }
       }
+    },
+    computed: {
+      ...mapGetters('page', {
+        pageTitle: 'title'
+      })
     },
     data: () => ({
       drawer: null,
