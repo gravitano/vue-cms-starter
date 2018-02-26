@@ -117,9 +117,9 @@
           to: '/'
         },
         {
-          icon: 'library_books',
-          text: 'Data',
-          to: '/data'
+          icon: 'person',
+          text: 'Users',
+          to: '/users'
         }
 //      {
 //        icon: 'settings',

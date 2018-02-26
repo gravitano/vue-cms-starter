@@ -21,6 +21,14 @@ export default new Router({
           meta: {
             middleware: 'auth'
           }
+        },
+        {
+          path: '/users',
+          name: 'users',
+          component: () => import('../pages/users'),
+          meta: {
+            middleware: 'auth'
+          }
         }
       ]
     }
