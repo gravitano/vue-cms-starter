@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <div>
     <v-layout row wrap>
       <v-flex xs4 class="pr-4">
         <v-card color="accent" class="white--text pa-2">
@@ -70,7 +70,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </v-container>
+  </div>
 </template>
 
 <script>
