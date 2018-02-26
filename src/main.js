@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import { registerMiddleware } from './router/middleware'
 
 Vue.use(Vuetify, {
   // theme: {
@@ -20,6 +21,9 @@ Vue.use(Vuetify, {
 })
 
 Vue.config.productionTip = false
+
+// register route middleware
+registerMiddleware(router, store)
 
 /* eslint-disable no-new */
 new Vue({

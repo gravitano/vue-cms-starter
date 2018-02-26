@@ -84,20 +84,18 @@
         class="hidden-sm-and-down"
       ></v-text-field>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>apps</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>notifications</v-icon>
-      </v-btn>
-      <v-btn icon large>
-        <v-avatar size="32px" tile>
-          <img
-            src="https://vuetifyjs.com/static/doc-images/logo.svg"
-            alt="Vuetify"
-          >
-        </v-avatar>
-      </v-btn>
+      <!--<v-btn icon>-->
+      <!--<v-icon>apps</v-icon>-->
+      <!--</v-btn>-->
+      <!--<v-btn icon>-->
+      <!--<v-icon>notifications</v-icon>-->
+      <!--</v-btn>-->
+      <v-tooltip bottom>
+        <v-btn @click="logout" icon large slot="activator">
+          <v-icon>exit_to_app</v-icon>
+        </v-btn>
+        <span>Logout</span>
+      </v-tooltip>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -108,40 +106,47 @@
 </template>
 
 <script>
-export default {
-  data: () => ({
-    drawer: null,
-    title: 'Vue.js CMS Starter',
-    items: [
-      {
-        icon: 'home',
-        text: 'Dashboard',
-        to: '/'
-      },
-      {
-        icon: 'person',
-        text: 'Users',
-        to: '/users'
-      },
-      {
-        icon: 'settings',
-        text: 'Settings',
-        to: '/settings'
+  export default {
+    data: () => ({
+      drawer: null,
+      title: 'Dashboard',
+      items: [
+        {
+          icon: 'home',
+          text: 'Dashboard',
+          to: '/'
+        },
+        {
+          icon: 'library_books',
+          text: 'Data',
+          to: '/data'
+        }
+//      {
+//        icon: 'settings',
+//        text: 'Settings',
+//        to: '/settings'
+//      }
+        // {
+        //   icon: 'keyboard_arrow_up',
+        //   'icon-alt': 'keyboard_arrow_down',
+        //   text: 'More',
+        //   model: false,
+        //   children: [
+        //     { text: 'Import' },
+        //     { text: 'Export' },
+        //     { text: 'Print' },
+        //     { text: 'Undo changes' },
+        //     { text: 'Other contacts' }
+        //   ]
+        // },
+      ]
+    }),
+    methods: {
+      logout () {
+        this.$store.dispatch('auth/logout').then(() => {
+          this.$router.push('/login')
+        })
       }
-      // {
-      //   icon: 'keyboard_arrow_up',
-      //   'icon-alt': 'keyboard_arrow_down',
-      //   text: 'More',
-      //   model: false,
-      //   children: [
-      //     { text: 'Import' },
-      //     { text: 'Export' },
-      //     { text: 'Print' },
-      //     { text: 'Undo changes' },
-      //     { text: 'Other contacts' }
-      //   ]
-      // },
-    ]
-  })
-}
+    }
+  }
 </script>
