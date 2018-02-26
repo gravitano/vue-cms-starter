@@ -23,7 +23,7 @@
                 <div class="display-2">34</div>
               </v-flex>
               <v-flex xs6>
-                <div class="body-1 text-xs-right">Salesman</div>
+                <div class="body-1 text-xs-right">Sales</div>
               </v-flex>
             </v-layout>
           </v-card-title>
