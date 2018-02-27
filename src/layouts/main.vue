@@ -110,7 +110,6 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'App',
     metaInfo () {
       return {
         title: 'Home',
