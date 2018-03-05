@@ -11,7 +11,12 @@ export default new Router({
     route('/login', 'login', 'pages/login'),
     route('/', null, 'layouts/main', [
       route('/', 'home', 'pages/home', null, 'auth'),
-      route('/users', 'users', 'pages/users', null, 'auth')
+      route('/users', 'users', 'pages/users', null, 'auth'),
+      route('/tabs', null, 'pages/tabs', [
+        route('one', 'tabs.one', 'pages/tabs/items/one', null, 'auth'),
+        route('two', 'tabs.two', 'pages/tabs/items/two', null, 'auth'),
+        route('three', 'tabs.three', 'pages/tabs/items/three', null, 'auth')
+      ])
     ])
   ]
 })

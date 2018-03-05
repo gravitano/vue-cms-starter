@@ -139,6 +139,11 @@
           icon: 'person',
           text: 'Users',
           to: '/users'
+        },
+        {
+          icon: 'tab',
+          text: 'Tabs',
+          to: '/tabs/one'
         }
 //        ,
 //        {
